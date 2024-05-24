@@ -601,7 +601,7 @@ if status == pywraplp.Solver.OPTIMAL:
     print(f"Total emissions for the tour: {round(total_emissions)} grams CO2.")
     #print(f"FINAL RESULT: A reduction of {round((1-total_emissions/taylors_emissions)*100)} %.")     # DOES NOT REALLY MAKE SENSE TO COMPARE TAYLOR TO GLOBAL
     if actual_tour == 0:
-      print(f"FINAL RESULT: The emissions for Taylor transport go from {round(taylors_emissions)} to {round(taylor_transport_emissions)} grams CO2, thus a reduction of {round((1-taylor_transport_emissions/taylors_emissions)*100, 4)} %.")
+      print(f"FINAL RESULT: The emissions for Taylor transport go from {round(taylors_emissions)} to {round(total_emissions)} grams CO2, thus a reduction of {round((1-total_emissions/taylors_emissions)*100, 4)} %.")
     else:
       taylors_emissions = total_emissions
       people_to_reach = people_reached
